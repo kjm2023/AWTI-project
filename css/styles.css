@@ -1,0 +1,494 @@
+/*-------------
+
+Reset Styles
+
+-----------------*/
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+
+/*----------------
+
+Body Styles
+
+-----------------*/
+
+a {
+    color: #000;
+}
+
+/*----------------
+
+Header Styles
+
+-----------------*/
+
+header {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/header-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+nav ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+nav ul a {
+    display: block;
+    padding: 20px;
+    border-right: 1px solid #AAA;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    background-color: #DDD;
+}
+
+
+/* Collapse/animate the menu */
+header nav .menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header .menu-icon {
+    padding: 22px 18px;
+    position: relative;
+    float: right;
+    top: 70%;
+    cursor: pointer;
+    background-color: #d5860f;
+}
+
+header .menu-icon .nav-icon {
+    background: #0a046b;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+    transition:background .2s ease-out;
+}
+
+header .menu-icon .nav-icon:before {
+    background: #0a046b;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition:all .2s ease-out;
+    top: 5px;
+}
+
+header .menu-icon .nav-icon:after {
+    background: #0a046b;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition:all .2s ease-out;
+    top: -5px;
+}
+
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked ~ nav .menu {
+    max-height: 240px;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background:transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+hr {
+    border-top: #0a046b 16px solid;
+    width: 80%;
+}
+
+/*----------------
+
+Promo Styles
+
+-----------------*/
+
+.promo {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20% 15%;
+    height: 30%;
+    margin-bottom: 10%;
+}
+
+#we{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10vw;
+    color: #d5860f;
+    float: left;
+    margin-right: .4em;
+    text-align: center;
+}
+
+.scroll:before {
+    content: '';
+    font-size: 10vw;
+    font-family:'Courier New', Courier, monospace;
+    color: #0a046b;
+    transition:ease .2s;
+    animation-name: promo-scroll;
+    animation-delay: 1s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+/*----------------
+
+Card Styles
+
+-----------------*/
+
+#cards {
+    clear: left;
+    margin: 0 auto;
+}
+
+.design,
+.consult,
+.breathe,
+.cardbox {
+    background-color: transparent;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 30%;
+    margin-bottom: 10%;
+    perspective: 1000px;
+}
+
+.design {
+    background-color:#d5860f;
+}
+
+.consult {
+    background-color: #0a046b;
+}
+
+.breathe {
+    background-color: #EAEAEA;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: .2em;
+    font-size: 10vw;
+    color: rgb(234, 234, 234);
+    color: rgba(234, 234, 234, 0);
+    -webkit-text-stroke: 2px #EAEAEA;
+}
+
+.breathe h2 {
+    color: rgb(10, 4, 107);
+    color: rgba(10, 4, 107, 0);
+    -webkit-text-stroke: 2px #0a046b;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .cardbox:hover .card,
+  .cardbox:active .card {
+    transform: rotateY(180deg);
+  }
+
+  .front, 
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .design .front {
+    background-color:#d5860f;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background-color: #0a046b;
+  }
+
+  .back p {
+      font-family:'Courier New', Courier, monospace;
+      font-size: 1.15em;
+      color: #FFF;
+      padding: 0 5%;
+  }
+
+  .breathe .back p {
+      color: #0a046b;
+  }
+
+  .back p:nth-child(2) {
+    width: 50%;
+    background-color: #0a046b;
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+    left: 25%;
+    padding: 3%;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: .1em;
+  }
+
+  .consult .back p:nth-child(2) {
+    background-color: #d5860f;
+  }
+
+  .breathe .back p:nth-child(2) {
+      color: #FFF;
+  }
+
+  .back a {
+      color: #FFF;
+      text-decoration: none;
+  }
+
+/*----------------
+
+Banner Styles
+
+-----------------*/
+
+#banner,
+#blurb,
+#categories {
+    background-color: #0a046b;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10% 15%;
+    height: 15%;
+    margin-bottom: 10%;
+}
+
+#banner h1 {
+    color: #FFF;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+}
+
+/* #banner h1::before {
+    content: "> ";
+    color: #d5860f;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: lighter;
+} */
+
+#banner p {
+    float: left;
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#banner-bar {
+    clear: left;
+    border-top: #d5860f 16px solid;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: -12%;
+}
+
+/*----------------
+
+Blurb Styles
+
+-----------------*/
+
+#blurb {
+    padding-right: 3%;
+}
+
+#blurb,
+#categories {
+    background-color: #FFF;
+}
+
+#blurb p,
+#categories p {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.25em;
+    color: #0a046b;
+}
+
+/*----------------
+
+Category Styles
+
+-----------------*/
+
+#categories {
+    text-align: center;
+}
+
+#categories p {
+    padding: 5% 0;
+}
+
+#categories hr {
+    border-top: #d5860f 4px solid;
+    width: 100%;
+    padding: 5%;
+
+}
+
+/*----------------
+
+Footer Styles
+
+-----------------*/
+
+footer {
+    background-color:#0a046b;
+    width: 100%;
+    height: 100px;
+}
+
+footer hr {
+    border-top: #d5860f 16px solid;
+    width: 80%;
+    margin-left: 20%;
+}
+
+footer ul {
+    width: 30%;
+    font-family: 'Bebas Neue', cursive;
+    color: #EAEAEA;
+    font-size: 5vw;
+    list-style-type: none;
+    position: relative;
+    top: 20%;
+    left: 70%;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li a {
+    color: #EAEAEA;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #FFF;
+}
+
+footer ul li a:active {
+    color: #d5860f;
+}
+
+footer ul li a:visited {
+    color: #AAA;
+}
+
+/*----------------
+
+Media Queries
+
+-----------------*/
+
+@media screen and (min-width:768px) {
+    header nav li {
+        float: left;
+        z-index: 3;
+        background-color:#d5860f;
+    }
+
+    .menu li a {
+        padding: 20px 40px;
+        color: #FFF;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2em;
+    }
+
+    .menu li a:hover {
+        color: #0a046b;
+    }
+
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    header .menu-icon {
+        display: none;
+    } 
+}
+
+/*----------------
+
+Animations
+
+-----------------*/
+
+
+@keyframes promo-scroll {
+    0%   {content: "design.";}
+    50%  {content: "consult.";}
+    100%  {content: "breathe.";}
+  }
+  
+
+
+/* Links list
+
+https://www.w3schools.com/cssref/pr_border.asp - Border properties
+https://www.w3schools.com/howto/howto_css_style_hr.asp - Syling a horizontal rule
+https://www.youtube.com/watch?v=sjrp1FEHnyA - Responsive CSS Menu with no JavaScript or Libraries
+https://www.w3schools.com/css/css3_animations.asp - Animations
+https://www.youtube.com/watch?v=GhxNhdf0liA - Pure CSS Changing Text Animation
+https://css-tricks.com/adding-stroke-to-web-text/ - Adding Stroke to web text
+https://www.w3schools.com/howto/howto_css_flip_card.asp - How to Create a Flip Card
+https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices
+
+
+
+*/
