@@ -378,6 +378,41 @@ Category Styles
 
 }
 
+/*---------------
+
+Sub-heading Styles
+
+---------------*/
+
+.design-banner {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    text-transform:uppercase;
+    font-weight: normal;
+    text-align: right;
+    color:#FFF;
+    background-color: #d5860f;
+    padding: 10%;
+}
+
+/*---------------
+
+Horizontal scroll images
+
+---------------*/
+
+.scroll-me {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll;
+}
+
+.scroll-me img {
+    width: 50%;
+    padding: 2%;
+}
+
 /*----------------
 
 Footer Styles
