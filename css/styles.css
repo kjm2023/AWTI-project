@@ -307,6 +307,13 @@ Banner Styles
     margin-bottom: 10%;
 }
 
+/* #banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+} */
+
 #banner h1 {
     color: #FFF;
     font-family: 'Bebas Neue', cursive;
@@ -322,13 +329,11 @@ Banner Styles
 } */
 
 #banner p {
-    float: left;
     color: #FFF;
     font-family:'Courier New', Courier, monospace;
 }
 
 #banner-bar {
-    clear: left;
     border-top: #d5860f 16px solid;
     width: 80%;
     margin-left: 20%;
@@ -409,7 +414,7 @@ Horizontal scroll images
 }
 
 .scroll-me img {
-    width: 50%;
+    max-width: 50%;
     padding: 2%;
 }
 
@@ -470,6 +475,7 @@ Media Queries
 -----------------*/
 
 @media screen and (min-width:768px) {
+    
     header nav li {
         float: left;
         z-index: 3;
@@ -496,6 +502,60 @@ Media Queries
     header .menu-icon {
         display: none;
     } 
+
+    /* Promo */
+
+    .promo {
+        width: 50%;
+        padding: 7.5% 7.5%;
+    }
+
+    .promo p {
+        text-align: center;
+        width: 100%;
+    }
+    
+    #we{
+        font-size: 5vw;
+    }
+    
+    .scroll:before {
+        font-size: 5vw;
+    }
+    
+
+    /* Page content flexes */
+
+    #cards {
+        display: flex;
+        flex-direction: rows;
+        gap: 1%;
+    }
+
+    .cardbox h2 {
+        font-size: 5vw;
+    }
+
+    /* Blurbs */
+    #banner {
+        padding: 5% 15%;
+    }
+
+    #blurb,
+    #categories {
+        margin: 0 auto;
+        padding: 5% 7.5%;
+        margin-bottom: 5%;
+    }
+
+    .design-banner {
+        padding: 5%;
+    }
+
+    footer ul {
+        font-size: 2.5vw;
+        left: 80%;
+    }
 }
 
 /*----------------
@@ -510,7 +570,7 @@ Animations
     50%  {content: "consult.";}
     100%  {content: "breathe.";}
   }
-  
+
 
 
 /* Links list
