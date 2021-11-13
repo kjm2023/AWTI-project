@@ -11,6 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="css/styles.css" type="text/css" rel="stylesheet" />
     <title>KJ Media | Design</title>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    
 </head>
 <body>
     <main>
@@ -21,9 +31,9 @@
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Consult</a></li>
-                    <li><a href="#">Breathe</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="consult.html">Consult</a></li>
+                    <li><a href="breathe.html">Breathe</a></li>
                 </ul>
             </nav>
             <hr>
@@ -46,12 +56,12 @@
         <section id="web-portfolio">
             <h2 class="design-banner">Web Design</h2>
             <div class="scroll-me">
-                <img src="images/website1.jpg" alt="website screenshot" />
-                <img src="images/website2.jpg" alt="website screenshot" />
-                <img src="images/website3.jpg" alt="website screenshot" />
-                <img src="images/website4.jpg" alt="website screenshot" />
-                <img src="images/website5.jpg" alt="website screenshot" />
-            </div>
+                <img class="item" src="images/website1.jpg" alt="website screenshot" />
+                <img class="item" src="images/website2.jpg" alt="website screenshot" />
+                <img class="item" src="images/website3.jpg" alt="website screenshot" />
+                <img class="item" src="images/website4.jpg" alt="website screenshot" />
+                <img class="item" src="images/website5.jpg" alt="website screenshot" />
+            </div>   
         </section>
         <section id ="graphic-porfolio">
             <h2 class="design-banner">Graphics</h2>
@@ -74,6 +84,5 @@
 
         </footer>
     </main>
-    
 </body>
 </html>
