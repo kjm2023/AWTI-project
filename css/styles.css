@@ -9,7 +9,7 @@ Reset Styles
     margin: 0;
   }
 
-
+  
 /*----------------
 
 Body Styles
@@ -469,6 +469,8 @@ footer ul li a:visited {
     color: #AAA;
 }
 
+
+
 /*----------------
 
 Media Queries
@@ -571,7 +573,6 @@ Animations
     50%  {content: "consult.";}
     100%  {content: "breathe.";}
   }
-
 
 
 /* Links list
